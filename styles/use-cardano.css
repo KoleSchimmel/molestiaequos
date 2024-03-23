@@ -1,0 +1,198 @@
+/* CardanoToaster styles */
+
+.cardano-toaster {
+  user-select: none;
+  z-index: 1000;
+  font-family: "Gill Sans", "Gill Sans MT", "Calibri", "Trebuchet MS", "sans-serif";
+  font-size: 1.1rem;
+  position: fixed;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.25);
+  top: 2rem;
+  right: -500px;
+  transition: right 0.2s ease-in-out;
+  width: 400px;
+  text-align: left;
+}
+
+.cardano-toaster--open {
+  right: 2rem;
+}
+
+.cardano-toaster__content {
+  height: calc(100% - 2px);
+  padding: 1rem 2rem;
+  word-break: break-word;
+}
+
+.cardano-toaster__close-button {
+  position: absolute;
+  top: 0.4rem;
+  right: 0.4rem;
+  background: none;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.cardano-toaster__warning-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* CardanoToaster notification styles */
+
+.cardano-notification {
+  user-select: none;
+  z-index: 1000;
+  font-family: "Gill Sans", "Gill Sans MT", "Calibri", "Trebuchet MS", "sans-serif";
+  font-size: 1.1rem;
+  position: fixed;
+  background: white;
+  border-radius: 50%;
+  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.25);
+  top: 2rem;
+  right: 2rem;
+  opacity: 1;
+  transition: opacity 0.2s ease-in-out;
+  transition-delay: 0.2s;
+  width: 2rem;
+  height: 2rem;
+  text-align: center;
+}
+
+.cardano-notification--open {
+  opacity: 0;
+  transition-delay: 0s;
+}
+
+.cardano-notification__content {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+/* CardanoWalletSelector styles */
+
+.cardano-wallet-selector {
+  user-select: none;
+  display: inline-block;
+  position: relative;
+}
+
+.cardano-wallet-selector__button {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  outline: none;
+  border: 1px solid #555;
+  background-color: white;
+  color: #222;
+  font-size: 1.25rem;
+  min-width: 200px;
+  min-height: 57px;
+  border-radius: 4px;
+  cursor: pointer;
+  padding: 1rem 2rem;
+}
+
+.cardano-wallet-selector__button--active {
+  border-radius: 4px 4px 0 0;
+  border-bottom: none;
+}
+
+.cardano-wallet-selector__button--loading {
+  cursor: wait;
+}
+
+.cardano-wallet-selector__button--warning {
+  color: rgba(0, 0, 0, 0.25);
+}
+
+.cardano-wallet-selector__button__icon {
+  margin: -5px 10px -5px -5px;
+}
+
+.cardano-wallet-selector__button__text {
+  text-align: center;
+  width: 100%;
+}
+
+.cardano-wallet-selector__button__warning-sign {
+  margin: -2px 0;
+}
+
+.cardano-wallet-selector__menu {
+  list-style: none;
+  position: absolute;
+  left: 0;
+  padding: 0;
+  margin: -0px 0;
+  width: 100%;
+}
+
+.cardano-wallet-selector__menu__item {
+  border: 1px solid #555;
+  border-top: none;
+  border-radius: none;
+  border-bottom: none;
+}
+
+.cardano-wallet-selector__menu__item button {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.6rem 1rem;
+  width: 100%;
+  outline: none;
+  border: none;
+  background-color: white;
+  font-size: 1.25rem;
+  cursor: pointer;
+}
+
+.cardano-wallet-selector__menu__item--current button {
+  background-color: #f0f0f0;
+}
+
+.cardano-wallet-selector__menu__item--current__checkmark {
+  font-style: inherit;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.cardano-wallet-selector__menu__item button:disabled {
+  color: rgba(0, 0, 0, 0.25);
+  cursor: default;
+}
+
+.cardano-wallet-selector__menu__item button:not(:disabled):hover {
+  background-color: #f2f2f2;
+}
+
+.cardano-wallet-selector__menu__item__text {
+  display: flex;
+  align-items: center;
+}
+
+.cardano-wallet-selector__menu__item__text__icon {
+  display: flex;
+  align-items: center;
+  width: 32px;
+  height: 32px;
+  margin-right: 0.5rem;
+}
+
+.cardano-wallet-selector__menu__item:last-child {
+  border-radius: 0 0 4px 4px;
+  border-bottom: 1px solid #555;
+}
+
+.cardano-wallet-selector__menu__item:last-child button {
+  border-radius: 0 0 3px 3px;
+}

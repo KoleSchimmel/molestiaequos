@@ -1,0 +1,58 @@
+{
+  "name": "molestiaequos",
+  "version": "1.0.0",
+  "engines": {
+    "node": ">=16.15.0"
+  },
+  "description": "A react context, hook, and set of components that makes interacting with the Cardano blockchain easy",
+  "main": "dist/index.js",
+  "module": "dist/index.js",
+  "types": "src/types/use-cardano.d.ts",
+  "keywords": [
+    "quia",
+    "dApp",
+    "web3",
+    "react",
+    "typescript",
+    "CIP-0030"
+  ],
+  "author": "KylieSimonis",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/KoleSchimmel/molestiaequos.git"
+  },
+  "bugs": {
+    "url": "https://github.com/KoleSchimmel/molestiaequos.git/issues"
+  },
+  "scripts": {
+    "build": "rollup -c",
+    "dev:package": "rollup -c -w &",
+    "dev:example": "cd example && pnpm dev -p 4200",
+    "dev": "concurrently \"pnpm dev:package\" \"pnpm dev:example\" \"node scripts/open.js\""
+  },
+  "peerDependencies": {
+    "lucid-cardano": "0.8.2",
+    "react": "^18.2.0"
+  },
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^23.0.5",
+    "@rollup/plugin-node-resolve": "^15.0.1",
+    "@rollup/plugin-typescript": "^10.0.1",
+    "@types/lodash": "^4.14.191",
+    "@types/node": "^18.11.15",
+    "@types/react": "^18.0.26",
+    "concurrently": "^7.6.0",
+    "fs-extra": "^11.1.0",
+    "localtunnel": "^2.0.2",
+    "open": "^8.4.0",
+    "open-cli": "^7.1.0",
+    "rollup": "^3.7.4",
+    "rollup-plugin-peer-deps-external": "^2.2.4",
+    "tslib": "^2.4.1",
+    "typescript": "^4.9.4"
+  },
+  "dependencies": {
+    "lodash": "^4.17.21"
+  }
+}
